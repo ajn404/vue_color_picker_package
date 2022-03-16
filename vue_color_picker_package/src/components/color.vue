@@ -35,20 +35,18 @@ export default {
   methods: {},
 
   filters:{
-    filter_rgba(value){
-      if(value<0) return 0
-    }
+  
   },
   watch: {
     rgb: {
       handler(val) {
         this.rgb_value = `rgb(${val.r},${val.g},${val.b})`;
 
-        Object.keys(val).map((item) => {
-          if (val[item] < 0) {
-            console.log("hh");
-          }
-        });
+        // Object.keys(val).map((item) => {
+        //   if (val[item] < 0) {
+        //     console.log("hh");
+        //   }
+        // });
       },
       deep: true,
     },
